@@ -1,12 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Django1 - Index</title>
-</head>
-<body>
-    <h1> Texto inicial</h1>
+    <head>
+        <meta charset="UTF-8">
+        <title>Django1 - Index</title>
+        <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    </head>
+    <body>
+        <center>
+        <h1>Texto inicial</h1>
+        <img src="{% static 'images/senac1.png' %}"/>
 
-    <h2>{{curso}}</h2><!--Chamando a chave do dicionario -->
-</body>
+        <h2>{{ curso }}</h2><!-- Chamando a chave do dicionário -->
+        <table>
+            <thead>
+                <tr><!-- Criando as colunas -->
+                    <th>Produto</th>
+                    <th>Preco</th>
+                </tr>
+                <tbody><!-- Criando o corpo da tabela -->
+                    {% for produto in produto %}
+                    <tr> <!-- Registro das linhas -->                    
+                        <td><a href="{% url 'produto' produto.id %}">{{produto.nome}}</a></td>
+                        <td>{{produto.preco}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </thead>        
+        </table>
+        <button onclick="teste();">Clique aqui</button>
+        <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+        </center>
+        
+    </body>
 </html>
+

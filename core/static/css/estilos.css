@@ -1,0 +1,61 @@
+/* Definindo paleta de cores */
+:root {
+    --cor_primaria: #941b0b;
+    --cor_secundaria: #2ecc71;
+    --background-color: #ecf0f1;
+    --cor_texto: #2c3e50;
+    --cor_hover: #e74c3c;
+}
+
+/* Estilo para o body */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);    
+    margin: 5;
+    padding: 80px;
+}
+
+/* Estilo para h1 */
+h1 {
+    color: var(--cor_primaria);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilo para h2 */
+h2 {
+    color: var(--cor_secundaria);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Estilo para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid var(--cor_texto);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilo para botões */
+button {
+    background-color: var(--cor_primaria);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor_hover);
+}
